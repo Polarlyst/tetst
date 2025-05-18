@@ -34,7 +34,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center ">
-      <div className="max-w-md w-full space-y-8 p-8"> {/* Overall container is max-w-md */}
+      <div className="max-w-md w-full space-y-8 p-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold text-white">
             Early Access
@@ -87,14 +87,13 @@ export default function LoginPage() {
             </a>.
           </p>
 
-          {/* Container for videos, allowing them to be horizontal and wrap */}
-          {/* On very small screens, they will stack due to max-w-md and iframe widths */}
-          <div className="flex flex-row flex-wrap justify-around items-start gap-x-4 gap-y-8">
+          {/* Container for videos and posts, using a responsive grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             {/* Web Search Video Block */}
-            <div className="flex flex-col items-center space-y-2 w-full"> {/* Each video block takes full width of its flex slot before wrapping */}
+            <div className="flex flex-col items-center space-y-2">
               <p className="font-semibold text-neutral-200">Web Search</p>
-              <div className="w-full max-w-[560px] mx-auto aspect-[560/314] rounded overflow-hidden bg-neutral-900">
+              <div className="w-full aspect-[560/314] rounded overflow-hidden bg-neutral-900">
                 <iframe
                   src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2FPolarlyst%2Fvideos%2F722303663558769%2F&show_text=false&width=560&t=51"
                   className="w-full h-full"
@@ -108,9 +107,9 @@ export default function LoginPage() {
             </div>
 
             {/* Chat with PDF Video Block */}
-            <div className="flex flex-col items-center space-y-2 w-full">
+            <div className="flex flex-col items-center space-y-2">
               <p className="font-semibold text-neutral-200">Chat with PDF</p>
-              <div className="w-full max-w-[560px] mx-auto aspect-[560/284] rounded overflow-hidden bg-neutral-900">
+              <div className="w-full aspect-[560/284] rounded overflow-hidden bg-neutral-900">
                 <iframe
                   src="https://www.facebook.com/plugins/video.php?height=284&href=https%3A%2F%2Fweb.facebook.com%2FPolarlyst%2Fvideos%2F2060802184418734%2F&show_text=false&width=560&t=0"
                   className="w-full h-full"
@@ -124,9 +123,9 @@ export default function LoginPage() {
             </div>
 
             {/* Deep Insights Video Block */}
-            <div className="flex flex-col items-center space-y-2 w-full">
+            <div className="flex flex-col items-center space-y-2">
               <p className="font-semibold text-neutral-200">Deep Insights</p>
-              <div className="w-full max-w-[560px] mx-auto aspect-[560/284] rounded overflow-hidden bg-neutral-900">
+              <div className="w-full aspect-[560/284] rounded overflow-hidden bg-neutral-900">
                 <iframe
                   src="https://www.facebook.com/plugins/video.php?height=284&href=https%3A%2F%2Fweb.facebook.com%2FPolarlyst%2Fvideos%2F694600339744184%2F&show_text=false&width=560&t=0"
                   className="w-full h-full"
@@ -138,7 +137,23 @@ export default function LoginPage() {
                 ></iframe>
               </div>
             </div>
-          </div> {/* End of videos container */}
+
+            {/* Analysis Tools Post Block */}
+            <div className="flex flex-col items-center space-y-2">
+              <p className="font-semibold text-neutral-200">Analysis Tools</p>
+              <div className="w-full aspect-[500/250] rounded overflow-hidden bg-neutral-900"> {/* Adjusted aspect ratio for post */}
+                <iframe
+                  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fphoto.php%3Ffbid%3D1070953185055274%26set%3Da.421324636684802%26type%3D3&show_text=true&width=500"
+                  className="w-full h-full"
+                  style={{ border: 'none', overflow: 'hidden' }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                ></iframe>
+              </div>
+            </div>
+          </div> {/* End of responsive grid container */}
         </div> {/* End of promotions section */}
       </div> {/* End of max-w-md container */}
     </div>
