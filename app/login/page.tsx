@@ -37,8 +37,11 @@ export default function LoginPage() {
       <div className="max-w-md w-full space-y-8 p-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold text-white">
-            Enter Password
+            Early Access
           </h2>
+          <p className="mt-2 text-center text-sm text-neutral-400">
+            Thank you for your trial.
+          </p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div>
@@ -70,7 +73,20 @@ export default function LoginPage() {
             </button>
           </div>
         </form>
+        <div className="mt-6 text-center text-sm text-neutral-400">
+          <p>
+            You can be early access, 50% off all plans.
+            <a
+              href="https://web.facebook.com/Polarlyst"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-white hover:text-neutral-300 underline ml-1"
+            >
+              DM us on Facebook
+            </a>.
+          </p>
+        </div>
       </div>
     </div>
   )
-} 
+}
