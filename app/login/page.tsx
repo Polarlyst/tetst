@@ -74,7 +74,7 @@ export default function LoginPage() {
           </div>
         </form>
         <div className="mt-6 text-center text-sm text-neutral-400">
-          <p>
+          <p className="mb-4"> {/* Added margin-bottom to separate text from video */}
             You can be early access, 50% off all plans.
             <a
               href="https://web.facebook.com/Polarlyst"
@@ -85,6 +85,18 @@ export default function LoginPage() {
               DM us on Facebook
             </a>.
           </p>
+          <div className="flex justify-center"> {/* Centering the iframe */}
+            <iframe
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2FPolarlyst%2Fvideos%2F722303663558769%2F&show_text=false&width=560&t=51"
+              width="560"
+              height="314"
+              style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} // Added maxWidth for responsiveness
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
