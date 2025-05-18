@@ -73,8 +73,9 @@ export default function LoginPage() {
             </button>
           </div>
         </form>
-        <div className="mt-6 text-center text-sm text-neutral-400">
-          <p className="mb-4"> {/* Added margin-bottom to separate text from video */}
+        {/* Promotions Section */}
+        <div className="mt-6 text-center text-sm text-neutral-400 space-y-6"> {/* Added space-y-6 for spacing between video blocks */}
+          <p>
             You can be early access, 50% off all plans.
             <a
               href="https://web.facebook.com/Polarlyst"
@@ -85,18 +86,37 @@ export default function LoginPage() {
               DM us on Facebook
             </a>.
           </p>
-          <div className="flex justify-center"> {/* Centering the iframe */}
+
+          {/* Web Search Video */}
+          <div className="flex flex-col items-center space-y-2"> {/* Use flex-col and items-center for vertical layout and centering */}
+            <p className="text-neutral-300">Web Search</p> {/* Description for the first video */}
             <iframe
               src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2FPolarlyst%2Fvideos%2F722303663558769%2F&show_text=false&width=560&t=51"
               width="560"
               height="314"
-              style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} // Added maxWidth for responsiveness
+              style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }}
               scrolling="no"
               frameBorder="0"
               allowFullScreen={true}
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             ></iframe>
           </div>
+
+          {/* Chat with PDF Video */}
+          <div className="flex flex-col items-center space-y-2"> {/* Another block for the second video */}
+             <p className="text-neutral-300">Chat with PDF</p> {/* Description for the second video */}
+            <iframe
+              src="https://www.facebook.com/plugins/video.php?height=284&href=https%3A%2F%2Fweb.facebook.com%2FPolarlyst%2Fvideos%2F2060802184418734%2F&show_text=false&width=560&t=0"
+              width="560"
+              height="284"
+              style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }}
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+
         </div>
       </div>
     </div>
